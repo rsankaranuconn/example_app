@@ -1,0 +1,18 @@
+<% provide(:title, 'Product information') %>
+<h1>Enter product information:</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@product) do |f| %>
+      <%= render 'shared/error_messages' %>
+      
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :sku %>
+      <%= f.text_field :sku %>
+
+      <%= f.submit "Create product", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
